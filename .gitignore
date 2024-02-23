@@ -1,0 +1,6 @@
+venv
+__pycache__
+components/__pycache__
+api/__pycache__
+utils/__pycache__
+userConfig/__pycache__
