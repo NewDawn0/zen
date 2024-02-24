@@ -1,6 +1,9 @@
 venv
+# .mypy_cache
 __pycache__
-components/__pycache__
 api/__pycache__
-utils/__pycache__
+components/__pycache__
+tests/__pycache__
 userConfig/__pycache__
+utils/__pycache__
+future/__pycache__
