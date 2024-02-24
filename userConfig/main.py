@@ -4,9 +4,7 @@ from api.prelude import *
 
 # Automatically called on app load
 def main() -> UserConfig:
-    """
-    Initializes and returns a UserConfig object with predefined key bindings.
-    """
+    # Initializes and returns a UserConfig object with predefined key bindings.
     config = UserConfig()
     config.key_binds = {
         # Type of lamba is fn(Cursor|None, Cursor|None) -> Any
@@ -29,9 +27,7 @@ import subprocess
 
 
 def open_browser():
-    """
-    Opens the Firefox browser using subprocess on Mac.
-    """
+    # Opens the Firefox browser using subprocess on Mac.
     # Tested on Mac, Only works on mac due to the open command being mac specific
     BUILTINS.notify("Opening firefox")
     subprocess.call(["open", "-a", "firefox"])
