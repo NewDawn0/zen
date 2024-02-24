@@ -652,4 +652,4 @@ FILETYPES = {
 
 
 def lookup(ext: str) -> str | None:
-    return FILETYPES.get(ext)
+    return FILETYPES.get(ext.lower())
