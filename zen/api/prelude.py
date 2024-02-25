@@ -19,4 +19,6 @@ ACTION: TypeAlias = Callable[..., None]  # void ... (*args, **nargs)
 
 @nullable_struct
 class UserConfig:
+    # In ms
+    key_chord_timeout = 500
     key_binds: dict[KEYBIND, ACTION] = {}

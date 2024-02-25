@@ -6,10 +6,10 @@ from zen.utils.globals.config import CONFIG
 
 # Class to handle key chording functionality
 class KeyChorder:
-    def __init__(self, timeout=0.5):
+    def __init__(self):
         # Initialize variables
         self.pressed_key: list[str] = []
-        self.timeout = timeout
+        self.timeout = CONFIG.key_chord_timeout
         self.timer = None
 
         # Dictionary to map keys for normalization
