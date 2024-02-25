@@ -3,7 +3,7 @@ from textual import events
 from textual.widgets import Static
 from textual.widgets import TextArea
 
-from api.colours import COLOURS as C
+from zen.api.colours import COLOURS as C
 
 # Initialize global variable
 TEXT: str = ""

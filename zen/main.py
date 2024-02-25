@@ -4,10 +4,10 @@ import sys
 from textual import events
 from textual.app import App
 
-from components.file_tree import FileTree
-from components.text_buffer import BufManagerWrapper
-from userConfig.main import BUILTINS
-from utils.globals.keys import KEYS
+from zen.components.file_tree import FileTree
+from zen.components.text_buffer import BufManagerWrapper
+from zen.api.builtins import BUILTINS
+from zen.utils.globals.keys import KEYS
 
 
 # Define Main class that inherits from App

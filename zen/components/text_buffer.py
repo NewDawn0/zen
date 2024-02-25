@@ -9,12 +9,12 @@ from textual.widgets import TabbedContent
 from textual.widgets import TextArea
 from textual.widgets.text_area import LanguageDoesNotExist
 
-from api.colours import COLOURS
-from components.popup import PopUp
-from utils.ft import lookup
-from utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT
-from utils.globals.bufs import CURR_BUF
-from utils.globals.keys import KEYS
+from zen.api.colours import COLOURS
+from zen.components.popup import PopUp
+from zen.utils.ft import lookup
+from zen.utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT
+from zen.utils.globals.bufs import CURR_BUF
+from zen.utils.globals.keys import KEYS
 
 # All hail the spaghetti code that follows
 

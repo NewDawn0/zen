@@ -2,9 +2,9 @@
 from typing import Callable
 from typing import TypeAlias
 
-from api.builtins import BUILTINS
-from components.file_tree import FileTree
-from utils.struct import nullable_struct
+from zen.api.builtins import BUILTINS
+from zen.components.file_tree import FileTree
+from zen.utils.struct import nullable_struct
 
 # Define type aliases for keybinds and actions
 KEYBIND: TypeAlias = tuple[str, ...]

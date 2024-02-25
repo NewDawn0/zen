@@ -1,7 +1,7 @@
 # Import neccesary modules
 import threading
 
-from utils.globals.config import CONFIG
+from zen.utils.globals.config import CONFIG
 
 
 # Class to handle key chording functionality

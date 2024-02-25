@@ -8,8 +8,8 @@ from textual.containers import Container
 from textual.widgets import DirectoryTree
 
 # Import custom APIs and colors
-from api.builtins import BUILTINS
-from api.colours import COLOURS as C
+from zen.api.builtins import BUILTINS
+from zen.api.colours import COLOURS as C
 
 # Define a container for displaying a file tree
 class FileTree(Container):

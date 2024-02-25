@@ -3,8 +3,8 @@ from textual.app import App
 from textual.notifications import SeverityLevel
 from textual.widget import Widget
 
-from utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT
-from utils.globals.bufs import CURR_BUF
+from zen.utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT
+from zen.utils.globals.bufs import CURR_BUF
 
 
 # Works via callbacks using a reference to WinMain from main
