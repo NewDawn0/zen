@@ -1,11 +1,6 @@
-import os
-import sys
 from typing import Generator
 
-import pytest
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from components.file_tree import *
+from zen.components.file_tree import *
 
 
 # Test the FileTree class

@@ -1,12 +1,5 @@
-import os
-import sys
-
-from api.prelude import UserConfig
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-import pytest
-from utils.globals.config import *
+from zen.api.prelude import UserConfig
+from zen.utils.globals.config import *
 
 
 def some_mock_func():

@@ -1,10 +1,6 @@
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
 import pytest
-from utils.struct import *
+
+from zen.utils.struct import *
 
 
 # Test for nullable_struct

@@ -1,9 +1,5 @@
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-import pytest
-from utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT, CURR_BUF
+from zen.utils.globals.bufs import BUF_NAME_TO_TEXT_BUF_DICT
+from zen.utils.globals.bufs import CURR_BUF
 
 
 def test_buf_name_to_text_buf_dict_initialization():

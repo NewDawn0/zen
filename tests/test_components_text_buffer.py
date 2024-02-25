@@ -1,10 +1,6 @@
 import os
-import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-import pytest
-from components.text_buffer import *
+from zen.components.text_buffer import *
 
 
 def test_text_buf_wrapper_save():

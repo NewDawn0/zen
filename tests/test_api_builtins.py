@@ -1,11 +1,8 @@
-import os
-import sys
 from unittest.mock import MagicMock
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import pytest
 
-from api.builtins import *
+from zen.api.builtins import *
 
 
 # Mock the App class and its methods

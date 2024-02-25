@@ -1,9 +1,4 @@
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-import pytest
-from components.popup import *
+from zen.components.popup import *
 
 # Mock the global TEXT variable
 TEXT = ""
