@@ -2,7 +2,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-REQUIREMENTS_FILE = "zen/requirements.txt"
+REQUIREMENTS_FILE = "requirements.txt"
 REQUIRED = None
 with open(REQUIREMENTS_FILE, "r") as f:
     REQUIRED = [line.strip() for line in f]
