@@ -27,7 +27,7 @@ To install Zen Text Editor, follow these steps:
 
 1. Clone the project
    ```bash
-   git clone https://github.com/NewDawn0/zen:
+   git clone https://github.com/NewDawn0/zen
    cd zen
    ```
 2. Install Zen using pip
