@@ -2,9 +2,18 @@
 import os
 import sys
 
+from zen.gen import CONTENTS
+
+# Create __init__ if it does not exist
 main_py_path = os.path.expanduser("~/.config/zen/__init__.py")
 if not os.path.exists(main_py_path):
-    exit("__init__.py not found in ~/.config/zen/")
+    config_dir = os.path.expanduser("~/.config/zen")
+    if not os.path.exists(config_dir):
+        os.makedirs(config_dir)
+    main_py_dst = os.path.join(config_dir, "__init__.py")
+    if not os.path.exists(main_py_dst):
+        with open(main_py_path, "w+") as f:
+            f.write(CONTENTS)
 
 # Push the user config
 sys.path.insert(0, os.path.dirname(main_py_path))
