@@ -3,6 +3,8 @@
 Zen Text Editor is a minimalist extensible text editor designed for simplicity
 and ease of use.
 
+**@Note:**  If you are a CS50 reviewer please also read the [CS50_README.md]()
+
 ## Contents
 
 <!-- vim-markdown-toc GFM -->
@@ -16,8 +18,6 @@ and ease of use.
     * [How to contribute](#how-to-contribute)
     * [Code structure](#code-structure)
 * [Future Goals](#future-goals)
-* [My experience](#my-experience)
-    * [Challenges and Hardships](#challenges-and-hardships)
 
 <!-- vim-markdown-toc -->
 
@@ -166,15 +166,3 @@ In future, if I have the time and motivation, I will try complete the following:
   [hlua](https://crates.io/crates/hlua)
 
 > ![Rewrite in Rust](https://s3.fission.codes/2022/10/rust_poster.png)
-
-## My experience
-
-### Challenges and Hardships
-
-During the development process, I encountered several challenges, including:
-
-- Missing data types like `uint`, commonly found in languages like C, C++, Go,
-  and Rust.
-- Issues with Python's import system, leading to potential circular imports and
-  clashes, which were mitigated by organizing global variables into separate
-  files in the `utils/globals` directory.
