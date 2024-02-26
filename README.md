@@ -3,7 +3,9 @@
 Zen Text Editor is a minimalist extensible text editor designed for simplicity
 and ease of use.
 
-**@Note:**  If you are a CS50 reviewer please goto the CS50 branch and read the [CS50_README.md]() aswell
+**@Note:** If you are a CS50 reviewer please goto the CS50 branch and read the
+[CS50_README.md](https://github.com/NewDawn0/zen/blob/CS50/CS50_README.md)
+aswell
 
 ## Contents
 
