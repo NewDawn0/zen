@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 ZEN_FILES=(
     "__pycache__"
+    "tests/__pycache__"
     "zen/.mypy_cache"
     "zen/.pytest_cache"
     "zen/__pycache__"
