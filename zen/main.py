@@ -4,9 +4,9 @@ import sys
 from textual import events
 from textual.app import App
 
+from zen.api.builtins import BUILTINS
 from zen.components.file_tree import FileTree
 from zen.components.text_buffer import BufManagerWrapper
-from zen.api.builtins import BUILTINS
 from zen.utils.globals.keys import KEYS
 
 
@@ -27,7 +27,6 @@ class Main(App):
     def on_key(self, event: events.Key) -> None:
         # Add pressed key to global keys
         KEYS.add(event.key or "")
-        KEYS.try_exec()
 
 
 # Main function to run the application

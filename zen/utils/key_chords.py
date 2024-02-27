@@ -8,8 +8,9 @@ from zen.utils.globals.config import CONFIG
 class KeyChorder:
     def __init__(self):
         # Initialize variables
-        self.pressed_key: list[str] = []
+        self.keys: list[str] = []
         self.timeout = CONFIG.key_chord_timeout
+        self.lock = threading.Lock()
         self.timer = None
 
         # Dictionary to map keys for normalization
@@ -27,33 +28,33 @@ class KeyChorder:
 
     # Add a key to the pressed keys list
     def add(self, key: str) -> None:
-        self.pressed_key.append(self._normalize(key))
-        self._reset_timer()
+        self.keys.append(self._normalize(key))
+        with self.lock:
+            if self.timer:
+                self.timer.cancel()
+            self.timer = threading.Timer(0.5, self.clear_keys)
+            self.timer.start()
+
+    # Clear the pressed keys list
+    def clear_keys(self):
+        with self.lock:
+            self.keys = []
 
     # Try to execute a key combination
     def try_exec(self) -> int:
-        keys = tuple(self.pressed_key)
-        length = len(self.pressed_key)
+        keys = tuple(self.keys)
+        length = len(self.keys)
         if fn := CONFIG.key_binds.get(keys):
-            self.pressed_key.clear()  # Clear keys
+            with self.lock:
+                self.keys = []  # Clear keys
             fn()
             return length
         return 0  # Zero indicates an error
 
-    # Reset the timer for key chord timeout
-    def _reset_timer(self) -> None:
-        if self.timer:
-            self.timer.cancel()
-        self.timer = threading.Timer(self.timeout, self.clear)
-        self.timer.start()
-
-    # Clear the pressed keys list
-    def clear(self) -> None:  # TODO: AUTOREMOVE
-        self.pressed_key.clear()
-
     # Get the current list of pressed keys
     def get(self) -> list[str]:  # TODO: AUTOREMOVE
-        return self.pressed_key
+        with self.lock:
+            return self.keys
 
     # Normalize the provided key
     def _normalize(self, key: str) -> str:
