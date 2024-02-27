@@ -35,19 +35,10 @@ def test_normalize_key():
     assert key_chorder._normalize("unknown_key") == "unknown_key"
 
 
-def test_reset_timer():
+def test_clear_keys():
     key_chorder = KeyChorder()
     key_chorder.add("ctrl")
     key_chorder.add("c")
     assert key_chorder.timer is not None
-    key_chorder._reset_timer()
-    assert key_chorder.timer is not None
-
-
-def test_clear():
-    key_chorder = KeyChorder()
-    key_chorder.add("ctrl")
-    key_chorder.add("c")
-    assert key_chorder.get() == ["ctrl", "c"]
-    key_chorder.clear()
+    key_chorder.clear_keys()
     assert key_chorder.get() == []
