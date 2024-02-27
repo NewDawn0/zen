@@ -99,7 +99,7 @@ class TextBuf(TextArea):
         CURR_BUF = TEXT_BUF_TO_BUF_NAME_DICT.get(self)._fname
         return super()._on_focus(event)
 
-    def _on_key(self, event: events.Key) -> None:
+    def on_key(self, event: events.Key) -> None:
         # Handle key event
         global CURR_BUF
         CURR_BUF = TEXT_BUF_TO_BUF_NAME_DICT.get(self)._fname
@@ -111,7 +111,7 @@ class TextBuf(TextArea):
             '"': '""',
         }
         optional_char = auto_chars.get(event.character or "")
-        KEYS.add(str(event.key))
+        KEYS.add(event.key)
         if optional_char:
             self.insert(optional_char)
             self.move_cursor_relative(columns=-1)
