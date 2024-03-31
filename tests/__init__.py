@@ -23,5 +23,4 @@ def run_tests():
     # Run all discovered tests
     pytest.main(["-v"])
 
-
 run_tests()
