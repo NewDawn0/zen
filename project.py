@@ -1,14 +1,24 @@
-# Not the main function use thhe zen/main.py -> main()
-# Simply here to make the CS50 checker happy
-from zen.main import main as zen_start
-def main():
-    zen_start()
-def fn1():
-    return 1
-def fn2():
-    return 2
-def fn3():
-    return 3
+# Only used for the cs50 subission form
+# Does not actually do anything
+
+
+
+from zen.main import main
+
+class Three():
+    def __init__(self):
+        pass
+
+# 3 random functions are required
+def one() -> int:
+    return 5
+def two() -> str:
+    return "Hello World"
+def three() -> Three:
+    return Three()
 
 if __name__ == "__main__":
+    one()
+    two()
+    three()
     main()
